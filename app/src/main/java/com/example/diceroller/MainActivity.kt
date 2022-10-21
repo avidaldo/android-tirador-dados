@@ -19,9 +19,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.button.setOnClickListener { rollDice() }
+
     }
 
-    fun rollDice(view: View) {
+    fun rollDice() {
 
         /* Generación de números aleatorios (varias opciones equivalentes): */
         val randomInt  = Random.nextInt(6) + 1
